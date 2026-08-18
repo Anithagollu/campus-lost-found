@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Campus Lost & Found</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎓 Campus Lost & Found</h1>
+
+
+    <!-- ================================= -->
+    <!-- LOGIN STATUS -->
+    <!-- ================================= -->
+
+    <div class="login-section">
+
+        {% if session.get("user_id") %}
+
+            <h2>
+                👋 Welcome, {{ session.get("user_name") }}!
+            </h2>
+
+            <p>
+                You are logged in as
+                <strong>
+                    {{ session.get("user_email") }}
+                </strong>
+            </p>
+
+            <a href="/logout">
+
+                <button>
+                    🚪 Logout
+                </button>
+
+            </a>
+
+        {% else %}
+
+            <h2>👤 Account</h2>
+
+            <a href="/login">
+
+                <button>
+                    🔐 Login
+                </button>
+
+            </a>
+
+            <a href="/register">
+
+                <button>
+                    📝 Register
+                </button>
+
+            </a>
+
+        {% endif %}
+
+    </div>
+
+
+    <p class="welcome">
+
+        Lost something? Found something?
+
+        Report it here and help your campus community!
+
+    </p>
+
+
+    <!-- ================================= -->
+    <!-- DASHBOARD SUMMARY -->
+    <!-- ================================= -->
+
+    {% if session.get("user_id") %}
+
+    <div class="dashboard">
+
+        <h2>📊 Dashboard Summary</h2>
+
+        <div class="dashboard-cards">
+
+
+            <!-- LOST ITEMS -->
+
+            <div class="dashboard-card">
+
+                <h3>🔴 Lost Items</h3>
+
+                <p>
+                    {{ lost_count }}
+                </p>
+
+            </div>
+
+
+            <!-- FOUND ITEMS -->
+
+            <div class="dashboard-card">
+
+                <h3>🟢 Found Items</h3>
+
+                <p>
+                    {{ found_count }}
+                </p>
+
+            </div>
+
+
+            <!-- MY LOST -->
+
+            <div class="dashboard-card">
+
+                <h3>👤 My Lost Reports</h3>
+
+                <p>
+                    {{ my_lost_count }}
+                </p>
+
+            </div>
+
+
+            <!-- MY FOUND -->
+
+            <div class="dashboard-card">
+
+                <h3>📋 My Found Reports</h3>
+
+                <p>
+                    {{ my_found_count }}
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FULL DASHBOARD BUTTON -->
+
+        <a href="/dashboard">
+
+            <button>
+                📊 Open Full Dashboard
+            </button>
+
+        </a>
+
+    </div>
+
+    {% endif %}
+
+
+    <!-- ================================= -->
+    <!-- LOGGED IN USER -->
+    <!-- ================================= -->
+
+    {% if session.get("user_id") %}
+
+
+        <!-- =============================== -->
+        <!-- REPORT LOST ITEM -->
+        <!-- =============================== -->
+
+        <div class="card">
+
+            <h2>🔴 Report a Lost Item</h2>
+
+            <form
+                action="/report-lost"
+                method="POST"
+                enctype="multipart/form-data">
+
+
+                <label>
+                    Item Name
+                </label>
+
+                <input
+                    type="text"
+                    name="item_name"
+                    placeholder="Example: Black Wallet"
+                    required>
+
+
+                <label>
+                    Description
+                </label>
+
+                <textarea
+                    name="description"
+                    placeholder="Describe the item"
+                    required></textarea>
+
+
+                <!-- IMAGE UPLOAD -->
+
+                <label>
+                    Upload Image
+                </label>
+
+                <input
+                    type="file"
+                    name="image"
+                    accept="image/*">
+
+
+                <label>
+                    Lost Location
+                </label>
+
+                <input
+                    type="text"
+                    name="location"
+                    placeholder="Example: Library"
+                    required>
+
+
+                <button type="submit">
+                    Report Lost Item
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- =============================== -->
+        <!-- REPORT FOUND ITEM -->
+        <!-- =============================== -->
+
+        <div class="card">
+
+            <h2>🟢 Report a Found Item</h2>
+
+            <form
+                action="/report-found"
+                method="POST"
+                enctype="multipart/form-data">
+
+
+                <label>
+                    Item Name
+                </label>
+
+                <input
+                    type="text"
+                    name="item_name"
+                    placeholder="Example: Student ID Card"
+                    required>
+
+
+                <label>
+                    Description
+                </label>
+
+                <textarea
+                    name="description"
+                    placeholder="Describe the found item"
+                    required></textarea>
+
+
+                <!-- IMAGE UPLOAD -->
+
+                <label>
+                    Upload Image
+                </label>
+
+                <input
+                    type="file"
+                    name="image"
+                    accept="image/*">
+
+
+                <label>
+                    Found Location
+                </label>
+
+                <input
+                    type="text"
+                    name="location"
+                    placeholder="Example: Canteen"
+                    required>
+
+
+                <button type="submit">
+                    Report Found Item
+                </button>
+
+            </form>
+
+        </div>
+
+
+    {% else %}
+
+
+        <!-- =============================== -->
+        <!-- LOGIN REQUIRED -->
+        <!-- =============================== -->
+
+        <div class="card">
+
+            <h2>🔐 Login Required</h2>
+
+            <p>
+                Please login or register to report
+                a lost or found item.
+            </p>
+
+            <a href="/login">
+
+                <button>
+                    🔐 Login
+                </button>
+
+            </a>
+
+            <a href="/register">
+
+                <button>
+                    📝 Register
+                </button>
+
+            </a>
+
+        </div>
+
+
+    {% endif %}
+
+
+    <!-- ================================= -->
+    <!-- VIEW ITEMS -->
+    <!-- ================================= -->
+
+    <div class="view-section">
+
+        <h2>📋 Browse Items</h2>
+
+
+        <a href="/lost-items">
+
+            <button>
+                🔴 View Lost Items
+            </button>
+
+        </a>
+
+
+        <a href="/found-items">
+
+            <button>
+                🟢 View Found Items
+            </button>
+
+        </a>
+
+
+        {% if session.get("user_id") %}
+
+            <br><br>
+
+
+            <a href="/my-reports">
+
+                <button>
+                    👤 My Reports
+                </button>
+
+            </a>
+
+
+            <a href="/dashboard">
+
+                <button>
+                    📊 Dashboard
+                </button>
+
+            </a>
+
+        {% endif %}
+
+    </div>
+
+
+</div>
+
+
+<script>
+
+document.querySelectorAll("form").forEach(function(form) {
+
+    form.addEventListener("submit", function() {
+
+        setTimeout(function() {
+            window.location.href = "/";
+        }, 500);
+
+    });
+
+});
+
+</script>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

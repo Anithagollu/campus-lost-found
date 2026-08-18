@@ -1,0 +1,516 @@
+/* =====================================================
+   CAMPUS LOST & FOUND
+   PROFESSIONAL STYLE
+   ===================================================== */
+
+
+/* =====================================================
+   GLOBAL
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+   ===================================================== */
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+
+/* =====================================================
+   HEADINGS
+   ===================================================== */
+
+h1 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+h2 {
+    color: #1f2937;
+}
+
+.welcome {
+    text-align: center;
+    font-size: 18px;
+    color: #6b7280;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   LOGIN SECTION
+   ===================================================== */
+
+.login-section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.login-section h2 {
+    margin-top: 0;
+}
+
+.login-section p {
+    color: #6b7280;
+}
+
+
+/* =====================================================
+   CARDS
+   ===================================================== */
+
+.card {
+    background: white;
+    padding: 28px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+
+/* =====================================================
+   FORM
+   ===================================================== */
+
+label {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #374151;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+textarea {
+    height: 105px;
+    resize: vertical;
+}
+
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+
+button {
+    margin-top: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   VIEW SECTION
+   ===================================================== */
+
+.view-section {
+    background: white;
+    padding: 28px;
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.view-section h2 {
+    margin-top: 0;
+}
+
+.view-section button {
+    margin: 8px;
+}
+
+
+/* =====================================================
+   ITEMS GRID
+   ===================================================== */
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );
+    gap: 22px;
+    margin-top: 30px;
+}
+
+
+/* =====================================================
+   ITEM CARD
+   ===================================================== */
+
+.item-card {
+    background: white;
+    padding: 24px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+
+    border-left: 5px solid #2563eb;
+
+    transition: 0.2s;
+}
+
+.item-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.item-card h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #111827;
+}
+
+.item-card p {
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   SEARCH
+   ===================================================== */
+
+.search-box {
+    margin: 25px 0;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+    background: white;
+}
+
+.search-box input:focus {
+    border-color: #2563eb;
+}
+
+
+/* =====================================================
+   STATUS
+   ===================================================== */
+
+.status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* Lost */
+
+.status.lost {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+
+/* Found */
+
+.status.found {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+
+/* Returned */
+
+.status.returned {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+
+/* =====================================================
+   STATUS BUTTON
+   ===================================================== */
+
+.status-btn {
+    background: #7c3aed;
+    margin-top: 8px;
+}
+
+.status-btn:hover {
+    background: #6d28d9;
+}
+
+
+/* =====================================================
+   EDIT BUTTON
+   ===================================================== */
+
+.edit-btn {
+    background: #16a34a;
+    margin-right: 6px;
+}
+
+.edit-btn:hover {
+    background: #15803d;
+}
+
+
+/* =====================================================
+   DELETE BUTTON
+   ===================================================== */
+
+.delete-btn {
+    background: #dc2626;
+    margin-top: 10px;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+
+/* =====================================================
+   CANCEL BUTTON
+   ===================================================== */
+
+.cancel-btn {
+    background: #6b7280;
+}
+
+.cancel-btn:hover {
+    background: #4b5563;
+}
+
+
+/* =====================================================
+   EDIT FORM
+   ===================================================== */
+
+.edit-form {
+    background: white;
+    padding: 28px;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.edit-form h2 {
+    margin-top: 0;
+}
+
+.edit-form input,
+.edit-form textarea {
+    margin-bottom: 10px;
+}
+
+
+/* =====================================================
+   EMPTY MESSAGE
+   ===================================================== */
+
+.empty-message {
+    background: white;
+    padding: 45px 25px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.empty-message h2 {
+    margin-top: 0;
+}
+
+.empty-message p {
+    color: #6b7280;
+}
+
+
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+
+.navigation {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.navigation a {
+    text-decoration: none;
+}
+
+.navigation button {
+    margin: 7px;
+}
+
+
+/* =====================================================
+   DASHBOARD
+   ===================================================== */
+
+.dashboard {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.dashboard h2 {
+    margin-bottom: 20px;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 18px
+        rgba(0, 0, 0, 0.08);
+
+    transition: 0.2s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+}
+
+.dashboard-card h3 {
+    margin-bottom: 15px;
+    color: #374151;
+}
+
+.dashboard-card p {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 800px) {
+
+    .container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .dashboard-cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .welcome {
+        font-size: 16px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .item-card {
+        padding: 20px;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .navigation button {
+        width: 100%;
+    }
+
+}
+.description-text {
+    white-space: pre-line;
+}
+.dashboard-link {
+    display: inline-block;
+    font-weight: bold;
+    color: blue;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.dashboard-link:hover {
+    text-decoration: underline;
+}
