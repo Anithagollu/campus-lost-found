@@ -285,11 +285,7 @@
                 <!-- =============================== -->
                 <!-- OWNER ONLY -->
                 <!-- =============================== -->
-                <p>
-                  Login ID: {{ session.get("user_id") }}<br>
-                  Item ID: {{ item.user_id }}
-                </p>
-                
+
                 {% if session.get("user_id")|string == item.user_id|string %}
 
                     <!-- RESOLVE -->
