@@ -78,7 +78,7 @@
                 <h3>🔴 Total Lost Items</h3>
 
                 <p>
-                    {{ total_lost }}
+                    {{ lost_count }}
                 </p>
 
                 <a href="/lost-items">
@@ -99,7 +99,7 @@
                 <h3>🟢 Total Found Items</h3>
 
                 <p>
-                    {{ total_found }}
+                    {{ found_count }}
                 </p>
 
                 <a href="/found-items">
@@ -141,7 +141,7 @@
                 <h3>👤 My Reports</h3>
 
                 <p>
-                    {{ my_reports }}
+                    {{ my_lost_count + my_found_count }}
                 </p>
 
                 <a href="/my-reports">
