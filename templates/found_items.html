@@ -286,7 +286,7 @@
                 <!-- OWNER ONLY -->
                 <!-- =============================== -->
 
-                {% if true %}
+                {% if session.get("user_id")|string == item.user_id|string %}
 
                     <!-- RESOLVE -->
 
