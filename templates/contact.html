@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Contact Reporter</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>📞 Contact Reporter</h1>
+
+        <h2>
+            {{ item.item_name }}
+        </h2>
+
+        <p>
+            <strong>Description:</strong>
+            {{ item.description }}
+        </p>
+
+        <p>
+            <strong>📍 Location:</strong>
+            {{ item.location }}
+        </p>
+
+        <hr>
+
+        <h2>👤 Reporter Details</h2>
+
+        <p>
+            <strong>Name:</strong>
+            {{ item.user_name }}
+        </p>
+
+        <p>
+            <strong>Email:</strong>
+            {{ item.user_email }}
+        </p>
+
+        <a href="mailto:{{ item.user_email }}">
+
+            <button>
+                ✉️ Send Email
+            </button>
+
+        </a>
+
+    </div>
+
+
+    <div class="navigation">
+
+        <a href="/lost-items">
+            <button>🔴 Lost Items</button>
+        </a>
+
+        <a href="/found-items">
+            <button>🟢 Found Items</button>
+        </a>
+
+        <a href="/">
+            <button>🏠 Home</button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

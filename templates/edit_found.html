@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Found Item</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f6fb;
+            color: #172b4d;
+        }
+
+        .header {
+            text-align: center;
+            padding-top: 28px;
+        }
+
+        .header h1 {
+            font-size: 38px;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 24px;
+            color: #64748b;
+            margin-top: 22px;
+        }
+
+        .container {
+            width: 82%;
+            max-width: 750px;
+            margin: 48px auto;
+            background: white;
+            padding: 48px 32px 32px;
+            border-radius: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-size: 21px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+            background: white;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        select {
+            cursor: pointer;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 16px;
+            margin-top: 25px;
+        }
+
+        button {
+            border: none;
+            padding: 15px 28px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .save-btn {
+            background: #2563eb;
+            color: white;
+        }
+
+        .save-btn:hover {
+            background: #1d4ed8;
+        }
+
+        .cancel-btn {
+            background: #6b7280;
+            color: white;
+            text-decoration: none;
+            padding: 15px 28px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .cancel-btn:hover {
+            background: #4b5563;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 92%;
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 30px;
+            }
+
+            .header p {
+                font-size: 19px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>🔎 Edit Found Item</h1>
+        <p>Update your found item details.</p>
+    </div>
+
+    <div class="container">
+
+        <form method="POST">
+
+            <div class="form-group">
+                <label for="item_name">Item Name</label>
+
+                <input
+                    type="text"
+                    id="item_name"
+                    name="item_name"
+                    value="{{ item.item_name }}"
+                    required
+                >
+            </div>
+
+
+            <div class="form-group">
+                <label for="description">Description</label>
+
+                <textarea
+                    id="description"
+                    name="description"
+                    required
+                >{{ item.description }}</textarea>
+            </div>
+
+
+            <div class="form-group">
+                <label for="location">Found Location</label>
+
+                <input
+                    type="text"
+                    id="location"
+                    name="location"
+                    value="{{ item.location }}"
+                    required
+                >
+            </div>
+
+
+            <div class="form-group">
+                <label for="category">Category</label>
+
+                <select id="category" name="category">
+
+                    <option value="Electronics"
+                        {% if item.category == "Electronics" %}selected{% endif %}>
+                        💻 Electronics
+                    </option>
+
+                    <option value="Documents"
+                        {% if item.category == "Documents" %}selected{% endif %}>
+                        📄 Documents
+                    </option>
+
+                    <option value="Books"
+                        {% if item.category == "Books" %}selected{% endif %}>
+                        📚 Books
+                    </option>
+
+                    <option value="Accessories"
+                        {% if item.category == "Accessories" %}selected{% endif %}>
+                        🎒 Accessories
+                    </option>
+
+                    <option value="Other"
+                        {% if item.category == "Other" or not item.category %}selected{% endif %}>
+                        📦 Other
+                    </option>
+
+                </select>
+            </div>
+
+
+            <div class="buttons">
+
+                <button type="submit" class="save-btn">
+                    💾 Save Changes
+                </button>
+
+                <a href="/found-items" class="cancel-btn">
+                    ❌ Cancel
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Edit Lost Item - Campus Lost & Found</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+
+        .edit-box {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 600px;
+            margin: 30px auto;
+        }
+
+        .edit-box label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .edit-box input,
+        .edit-box textarea,
+        .edit-box select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            box-sizing: border-box;
+        }
+
+        .edit-box textarea {
+            min-height: 120px;
+        }
+
+        .save-btn {
+            margin-top: 20px;
+        }
+
+        .cancel-btn {
+            margin-top: 20px;
+            margin-left: 8px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <h1>✏️ Edit Lost Item</h1>
+
+    <p class="welcome">
+        Update your lost item details.
+    </p>
+
+
+    <div class="edit-box">
+
+        <form method="POST">
+
+
+            <!-- ITEM NAME -->
+
+            <label>
+                Item Name
+            </label>
+
+            <input
+                type="text"
+                name="item_name"
+                value="{{ item.item_name }}"
+                required>
+
+
+            <!-- DESCRIPTION -->
+
+            <label>
+                Description
+            </label>
+
+            <textarea
+                name="description"
+                required>{{ item.description }}</textarea>
+
+
+            <!-- LOCATION -->
+
+            <label>
+                Lost Location
+            </label>
+
+            <input
+                type="text"
+                name="location"
+                value="{{ item.location }}"
+                required>
+
+
+            <!-- CATEGORY -->
+
+            <label>
+                Category
+            </label>
+
+            <select name="category">
+
+                <option value="Electronics"
+                    {% if item.category == "Electronics" %}selected{% endif %}>
+                    📱 Electronics
+                </option>
+
+                <option value="Documents"
+                    {% if item.category == "Documents" %}selected{% endif %}>
+                    📄 Documents
+                </option>
+
+                <option value="Wallet"
+                    {% if item.category == "Wallet" %}selected{% endif %}>
+                    👛 Wallet
+                </option>
+
+                <option value="Keys"
+                    {% if item.category == "Keys" %}selected{% endif %}>
+                    🔑 Keys
+                </option>
+
+                <option value="Bag"
+                    {% if item.category == "Bag" %}selected{% endif %}>
+                    🎒 Bag
+                </option>
+
+                <option value="Clothing"
+                    {% if item.category == "Clothing" %}selected{% endif %}>
+                    👕 Clothing
+                </option>
+
+                <option value="Other"
+                    {% if item.category == "Other" or not item.category %}selected{% endif %}>
+                    📦 Other
+                </option>
+
+            </select>
+
+
+            <!-- BUTTONS -->
+
+            <button
+                type="submit"
+                class="save-btn">
+
+                💾 Save Changes
+
+            </button>
+
+
+            <a href="/lost-items">
+
+                <button
+                    type="button"
+                    class="cancel-btn">
+
+                    ❌ Cancel
+
+                </button>
+
+            </a>
+
+        </form>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <div class="navigation">
+
+        <a href="/">
+            <button>🏠 Home</button>
+        </a>
+
+        <a href="/lost-items">
+            <button>🔴 Lost Items</button>
+        </a>
+
+        <a href="/found-items">
+            <button>🟢 Found Items</button>
+        </a>
+
+        <a href="/my-reports">
+            <button>👤 My Reports</button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
