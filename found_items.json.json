@@ -1,0 +1,127 @@
+[{
+  "_id": {
+    "$oid": "6a83344ab0cd6bc8c4b44948"
+  },
+  "item_name": "Wallet",
+  "description": "Black color wallet",
+  "location": "Classroom",
+  "category": "Other",
+  "image": "1786983498_Black_wallet.webp",
+  "reported_at": "17-Aug-2026, 09:48 PM",
+  "user_id": "6a808ce8ec750c49c3968308",
+  "user_name": "Anitha Gollu",
+  "user_email": "anithagollu3@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "6a833476b0cd6bc8c4b44949"
+  },
+  "item_name": "Mobile",
+  "description": "One plus mobile",
+  "location": "cellar",
+  "category": "Electronics",
+  "image": "1786983542_one_plus_mobile.jpeg",
+  "reported_at": "17-Aug-2026, 09:49 PM",
+  "user_id": "6a808ce8ec750c49c3968308",
+  "user_name": "Anitha Gollu",
+  "user_email": "anithagollu3@gmail.com",
+  "status": "Resolved"
+},
+{
+  "_id": {
+    "$oid": "6a8334a6b0cd6bc8c4b4494a"
+  },
+  "item_name": "Pen",
+  "description": "Brown color tik tik pen",
+  "location": "Classroom",
+  "category": "Books",
+  "image": "1786983590_brown_pen.jpeg",
+  "reported_at": "17-Aug-2026, 09:49 PM",
+  "user_id": "6a808ce8ec750c49c3968308",
+  "user_name": "Anitha Gollu",
+  "user_email": "anithagollu3@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "6a8334cfb0cd6bc8c4b4494b"
+  },
+  "item_name": "Exam pad",
+  "description": "Blue color exam pad",
+  "location": "Computer lab",
+  "category": "Books",
+  "image": "1786983631_blue_exam_pad.jpeg",
+  "reported_at": "17-Aug-2026, 09:50 PM",
+  "user_id": "6a808ce8ec750c49c3968308",
+  "user_name": "Anitha Gollu",
+  "user_email": "anithagollu3@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "6a833582b0cd6bc8c4b4494c"
+  },
+  "item_name": "ID Card",
+  "description": "Jaya prakash naidu\r\nBCA \r\nfinal year",
+  "location": "Library",
+  "category": "Other",
+  "image": "1786983810_ID_card.jpg",
+  "reported_at": "17-Aug-2026, 09:53 PM",
+  "user_id": "6a808ce8ec750c49c3968308",
+  "user_name": "Anitha Gollu",
+  "user_email": "anithagollu3@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "6a8342430139a1a6c4ffc126"
+  },
+  "item_name": "Bag ",
+  "description": "Blue color bag",
+  "location": "Computer lab",
+  "category": "Accessories",
+  "image": "1786987075_bluebag.jpeg",
+  "reported_at": "17-Aug-2026, 10:47 PM",
+  "user_id": "6a833e200139a1a6c4ffc123",
+  "user_name": "Hanitha Bandaru",
+  "user_email": "anithagollu0103@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "6a8342700139a1a6c4ffc127"
+  },
+  "item_name": "Book ",
+  "description": "Red color note book",
+  "location": "Library",
+  "category": "Books",
+  "image": "1786987120_red_note_book.jpg",
+  "reported_at": "17-Aug-2026, 10:48 PM",
+  "user_id": "6a833e200139a1a6c4ffc123",
+  "user_name": "Hanitha Bandaru",
+  "user_email": "anithagollu0103@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "6a8342d30139a1a6c4ffc128"
+  },
+  "item_name": "Mobile",
+  "description": "POCO 4G mobile",
+  "location": "Classroom",
+  "category": "Electronics",
+  "image": "1786987219_mobile.jpeg",
+  "reported_at": "17-Aug-2026, 10:50 PM",
+  "user_id": "6a833e200139a1a6c4ffc123",
+  "user_name": "Hanitha Bandaru",
+  "user_email": "anithagollu0103@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "6a8343860139a1a6c4ffc12a"
+  },
+  "item_name": "Lock with keys",
+  "description": "China padlock gold color with two keys",
+  "location": "Play ground",
+  "category": "Other",
+  "image": "1786987398_lock_and_keys.jpg",
+  "reported_at": "17-Aug-2026, 10:53 PM",
+  "user_id": "6a833e200139a1a6c4ffc123",
+  "user_name": "Hanitha Bandaru",
+  "user_email": "anithagollu0103@gmail.com"
+}]

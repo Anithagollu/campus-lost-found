@@ -1,0 +1,170 @@
+[{
+  "_id": {
+    "$oid": "6a8336eeb0cd6bc8c4b4494d"
+  },
+  "item_name": "ID Card",
+  "description": "G Anitha \r\nBSC computer science\r\n3rd year ",
+  "location": "Classroom",
+  "category": "Other",
+  "image": "1786984174_ID_card.jpg",
+  "reported_at": "17-Aug-2026, 09:59 PM",
+  "user_id": "6a808ce8ec750c49c3968308",
+  "user_name": "Anitha Gollu",
+  "user_email": "anithagollu3@gmail.com",
+  "status": "Resolved"
+},
+{
+  "_id": {
+    "$oid": "6a833713b0cd6bc8c4b4494e"
+  },
+  "item_name": "Mobile",
+  "description": "OPPO A75 4G mobile",
+  "location": "Canteen",
+  "category": "Electronics",
+  "image": "1786984211_mobile.jpeg",
+  "reported_at": "17-Aug-2026, 10:00 PM",
+  "user_id": "6a808ce8ec750c49c3968308",
+  "user_name": "Anitha Gollu",
+  "user_email": "anithagollu3@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "6a833764b0cd6bc8c4b4494f"
+  },
+  "item_name": "Pen",
+  "description": "Green color pen",
+  "location": "Classroom",
+  "category": "Bag",
+  "image": "1786984292_green_pen.jpeg",
+  "reported_at": "17-Aug-2026, 10:01 PM",
+  "user_id": "6a808ce8ec750c49c3968308",
+  "user_name": "Anitha Gollu",
+  "user_email": "anithagollu3@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "6a8337afb0cd6bc8c4b44950"
+  },
+  "item_name": "Water bottle",
+  "description": "Black color steel water bottle",
+  "location": "cellar",
+  "category": "Other",
+  "image": "1786984367_Black_water_bottel.jpeg",
+  "reported_at": "17-Aug-2026, 10:02 PM",
+  "user_id": "6a808ce8ec750c49c3968308",
+  "user_name": "Anitha Gollu",
+  "user_email": "anithagollu3@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "6a8337dbb0cd6bc8c4b44951"
+  },
+  "item_name": "Wallet",
+  "description": "Brown color wallet",
+  "location": "Computer lab",
+  "category": "Other",
+  "image": "1786984411_brown_wallet.webp",
+  "reported_at": "17-Aug-2026, 10:03 PM",
+  "user_id": "6a808ce8ec750c49c3968308",
+  "user_name": "Anitha Gollu",
+  "user_email": "anithagollu3@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "6a8337fab0cd6bc8c4b44952"
+  },
+  "item_name": "Water bottle",
+  "description": "Steel water bottle",
+  "location": "Computer lab",
+  "category": "Other",
+  "image": "1786984442_steel_bottel.webp",
+  "reported_at": "17-Aug-2026, 10:04 PM",
+  "user_id": "6a808ce8ec750c49c3968308",
+  "user_name": "Anitha Gollu",
+  "user_email": "anithagollu3@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "6a833829b0cd6bc8c4b44953"
+  },
+  "item_name": "Mobile",
+  "description": "VIVO Gray color mobile",
+  "location": "Canteen",
+  "category": "Electronics",
+  "image": "1786984489_vivo_mobile.jpeg",
+  "reported_at": "17-Aug-2026, 10:04 PM",
+  "user_id": "6a808ce8ec750c49c3968308",
+  "user_name": "Anitha Gollu",
+  "user_email": "anithagollu3@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "6a8340720139a1a6c4ffc124"
+  },
+  "item_name": "Keys",
+  "description": "5 keys",
+  "location": "office",
+  "category": "Keys",
+  "image": "1786986610_gold_keys.jpeg",
+  "reported_at": "17-Aug-2026, 10:40 PM",
+  "user_id": "6a833e200139a1a6c4ffc123",
+  "user_name": "Hanitha Bandaru",
+  "user_email": "anithagollu0103@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "6a8342040139a1a6c4ffc125"
+  },
+  "item_name": "Wallet",
+  "description": "Brown color wallet",
+  "location": "Canteen",
+  "category": "Wallet",
+  "image": "1786987012_brown_wallet.webp",
+  "reported_at": "17-Aug-2026, 10:46 PM",
+  "user_id": "6a833e200139a1a6c4ffc123",
+  "user_name": "Hanitha Bandaru",
+  "user_email": "anithagollu0103@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "6a8342f40139a1a6c4ffc129"
+  },
+  "item_name": "Water bottle",
+  "description": "Black color water bottel",
+  "location": "Computer lab",
+  "category": "Other",
+  "image": "1786987252_Black_water_bottel.jpeg",
+  "reported_at": "17-Aug-2026, 10:50 PM",
+  "user_id": "6a833e200139a1a6c4ffc123",
+  "user_name": "Hanitha Bandaru",
+  "user_email": "anithagollu0103@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "6a8343de0139a1a6c4ffc12b"
+  },
+  "item_name": "Exam pad",
+  "description": "Pink and yellow color flowers on the pad",
+  "location": "office",
+  "category": "Bag",
+  "image": "",
+  "reported_at": "17-Aug-2026, 10:54 PM",
+  "user_id": "6a833e200139a1a6c4ffc123",
+  "user_name": "Hanitha Bandaru",
+  "user_email": "anithagollu0103@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "6ab4a4add2da96eeacbc25a4"
+  },
+  "item_name": "Mobile",
+  "description": "iphone 18 pro max",
+  "location": "Library",
+  "category": "Other",
+  "image": "1790223533_vivo_mobile.jpeg",
+  "status": "Active",
+  "reported_at": "24-Sep-2026, 09:48 AM",
+  "user_id": "6ab4a43ed2da96eeacbc25a3",
+  "user_name": "Padhu ",
+  "user_email": "padhusanapala78@gmail.com"
+}]
